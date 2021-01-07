@@ -1,0 +1,45 @@
+{
+  "name": "users-api",
+  "version": "1.0.0",
+  "description": "Users management API ",
+  "main": "server.js",
+  "engines": {
+    "node": "14.15.4",
+    "npm": "6.14.10"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production  babel-node server/server.js",
+    "migration": "babel-node node_modules/.bin/sequelize db:migrate",
+    "seeds": "babel-node node_modules/.bin/sequelize db:seed:all --seeders-path server/database/seeders",
+    "dev": "NODE_ENV=development nodemon --exec babel-node --presets @babel/preset-env server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nshutijonathan/users-api.git"
+  },
+  "author": "Jonathan Nshuti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nshutijonathan/users-api/issues"
+  },
+  "homepage": "https://github.com/nshutijonathan/users-api#readme",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.7",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
+  }
+}
